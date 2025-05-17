@@ -1,0 +1,9 @@
+{
+	"name": "inteligencia-negocios",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "0f132aa2-fe63-493d-b57d-40ac7240e361",
+		"tenantId": "84c31ca0-ac3b-4eae-ad11-519d80233e6f"
+	}
+}
