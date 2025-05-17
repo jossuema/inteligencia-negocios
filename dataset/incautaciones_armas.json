@@ -1,0 +1,21 @@
+{
+	"name": "incautaciones_armas",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "storageproject",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Excel",
+		"typeProperties": {
+			"sheetName": "Sheet1",
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "mdi_armasilicitas_pm_2025_marzo.xlsx",
+				"container": "project"
+			},
+			"firstRowAsHeader": true
+		},
+		"schema": []
+	}
+}
