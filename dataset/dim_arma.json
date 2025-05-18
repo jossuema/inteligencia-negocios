@@ -1,0 +1,42 @@
+{
+	"name": "dim_arma",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "synapse",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlDWTable",
+		"schema": [
+			{
+				"name": "arma_id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "nombre_arma",
+				"type": "varchar"
+			},
+			{
+				"name": "clase_arma",
+				"type": "varchar"
+			},
+			{
+				"name": "calidad_detencion",
+				"type": "varchar"
+			},
+			{
+				"name": "fabricacion",
+				"type": "varchar"
+			},
+			{
+				"name": "subtipo_arma",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "dim_arma"
+		}
+	}
+}

@@ -1,0 +1,52 @@
+{
+	"name": "hechosIncautacionArma",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "synapse",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlDWTable",
+		"schema": [
+			{
+				"name": "id_hecho",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "fecha_id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ubicacion_id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "lugar_id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "arma_id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "zona_id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "delito_id",
+				"type": "int",
+				"precision": 10
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "hechos_incautacion_arma"
+		}
+	}
+}

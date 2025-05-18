@@ -1,0 +1,30 @@
+{
+	"name": "dim_lugar",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "synapse",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlDWTable",
+		"schema": [
+			{
+				"name": "lugar_id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "tipo_lugar",
+				"type": "varchar"
+			},
+			{
+				"name": "lugar",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "dim_lugar"
+		}
+	}
+}

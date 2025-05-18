@@ -1,0 +1,56 @@
+{
+	"name": "dim_ubicacion",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "synapse",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlDWTable",
+		"schema": [
+			{
+				"name": "ubicacion_id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "codigo_provincia",
+				"type": "varchar"
+			},
+			{
+				"name": "nombre_provincia",
+				"type": "varchar"
+			},
+			{
+				"name": "codigo_canton",
+				"type": "varchar"
+			},
+			{
+				"name": "nombre_canton",
+				"type": "varchar"
+			},
+			{
+				"name": "codigo_parroquia",
+				"type": "varchar"
+			},
+			{
+				"name": "nombre_parroquia",
+				"type": "varchar"
+			},
+			{
+				"name": "latitud",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "longitud",
+				"type": "float",
+				"precision": 15
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "dim_ubicacion"
+		}
+	}
+}
