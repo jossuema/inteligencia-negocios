@@ -5,13 +5,8 @@
 		"annotations": [],
 		"type": "AzureSqlDW",
 		"typeProperties": {
-			"server": "inteligencianegocio.sql.azuresynapse.net",
-			"database": "principal",
-			"encrypt": "mandatory",
-			"trustServerCertificate": false,
-			"authenticationType": "SQL",
-			"userName": "sqladminuser",
-			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQEY3NzM5MDhCLUY2OTAtNDVEQS05OUFDLTkxRkE4QkY4MDI3M183Y2RkNjQyNy04Y2ZhLTQ4ZWMtYjZlZS05NzhjMGQ5NmRmN2MiDQp9"
+			"connectionString": "integrated security=False;encrypt=True;connection timeout=30;data source=inteligencianegocio.sql.azuresynapse.net;initial catalog=principal;user id=sqladminuser",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQEY3NzM5MDhCLUY2OTAtNDVEQS05OUFDLTkxRkE4QkY4MDI3M19lODUzNGIxMi1jZjA0LTRmMGQtOWNkYi1kMDUwZjU4OTNiYjQiDQp9"
 		}
 	}
 }
