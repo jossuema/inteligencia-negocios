@@ -1,0 +1,17 @@
+{
+	"name": "hechos_incautacion_arma",
+	"properties": {
+		"content": {
+			"query": "CREATE TABLE hechos_incautacion_arma (\n    id_hecho INT,\n    fecha_id INT,\n    ubicacion_id INT,\n    lugar_id INT,\n    arma_id INT,\n    zona_policial_id INT,\n    delito_id INT\n);\n\nCREATE TABLE dim_incautacion_arma_fecha (\n    fecha_id INT,\n    fecha_evento DATE,\n    hora_evento TIME\n);\n\nCREATE TABLE dim_incautacion_arma_ubicacion (\n    ubicacion_id INT,\n    provincia VARCHAR(100),\n    canton VARCHAR(100),\n    parroquia VARCHAR(100),\n    latitud FLOAT,\n    longitud FLOAT\n);\n\nCREATE TABLE dim_incautacion_arma_lugar (\n    lugar_id INT,\n    tipo_lugar VARCHAR(150),\n    lugar VARCHAR(150)\n);\n\nCREATE TABLE dim_arma (\n    arma_id INT,\n    nombre_arma VARCHAR(100), -- nombre_objeto\n    clase_arma VARCHAR(100),\n    calidad_detencion VARCHAR(100), -- calidad_de\n    fabricacion VARCHAR(100),\n    subtipo_arma VARCHAR(100) -- subtipo_objeto_robado\n);\n\nCREATE TABLE dim_incautacion_arma_zona_policial (\n    zona_policial_id INT,\n    zona VARCHAR(100),\n    distrito VARCHAR(100),\n    circuito VARCHAR(100),\n    subcircuito VARCHAR(100)\n);\n\nCREATE TABLE dim_incautacion_arma_delito (\n    delito_id INT,\n\tdelito VARCHAR(255),\n    tipo_delito VARCHAR(255)\n);",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "principal",
+				"poolName": "principal"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
