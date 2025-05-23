@@ -1,0 +1,17 @@
+{
+	"name": "hechos_homicidios",
+	"properties": {
+		"content": {
+			"query": "CREATE TABLE hechos_homicidios (\n    id_hecho INT,\n    fecha_id INT,\n    ubicacion_id INT,\n    lugar_id INT,\n    zona_policial_id INT,\n    demografia_id INT,\n    motivacion_id INT,\n\tcaracteristicas_id INT\n);\n\nCREATE TABLE dim_homicidios_fecha (\n    fecha_id INT,\n    fecha_evento DATE,\n    hora_evento TIME\n);\n\nCREATE TABLE dim_homicidios_ubicacion (\n    ubicacion_id INT,\n    provincia VARCHAR(100),\n    canton VARCHAR(100),\n    parroquia VARCHAR(100),\n    latitud FLOAT,\n    longitud FLOAT\n);\n\nCREATE TABLE dim_homicidios_lugar (\n    lugar_id INT,\n    tipo_lugar VARCHAR(150),\n    lugar VARCHAR(150)\n);\n\n\nCREATE TABLE dim_homicidios_zona_policial (\n    zona_policial_id INT,\n\tnombre_zona VARCHAR(100),\n    nombre_distrito VARCHAR(100),\n    nombre_circuito VARCHAR(100),\n    nombre_subcircuito VARCHAR(100)\n);\n\nCREATE TABLE dim_homicidios_demografia (\n\tdemografia_id INT,\n\tsexo VARCHAR(100),\n    genero VARCHAR(100),\n    edad INT,\n    nacionalidad VARCHAR(100),\n\tetnia VARCHAR(100),\n\testado_civil VARCHAR(100),\n\tnivel_instruccion VARCHAR(100),\n    discapacidad VARCHAR(100),\n    profesion VARCHAR(100)\n);\n\nCREATE TABLE dim_homicidios_motivacion (\n\tmotivacion_id INT,\n\tpresunta_motivacion VARCHAR(255),\n\tcausa_motivada VARCHAR(255)\n);\n\nCREATE TABLE dim_homicidios_caracteristicas (\n\tcaracteristicas_id INT,\n\ttipo_muerte VARCHAR(100),\n\tarma VARCHAR(100),\n\ttipo_arma VARCHAR(100)\n);",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "principal",
+				"poolName": "principal"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
