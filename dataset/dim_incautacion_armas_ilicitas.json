@@ -1,0 +1,30 @@
+{
+	"name": "dim_incautacion_armas_ilicitas",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "synapse",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlDWTable",
+		"schema": [
+			{
+				"name": "delito_id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "delito",
+				"type": "varchar"
+			},
+			{
+				"name": "tipo_delito",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "dim_incautacion_arma_delito"
+		}
+	}
+}
