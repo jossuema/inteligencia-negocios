@@ -1,0 +1,31 @@
+{
+	"name": "dim_homicidios_fecha",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "synapse",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlDWTable",
+		"schema": [
+			{
+				"name": "fecha_id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "fecha_evento",
+				"type": "date"
+			},
+			{
+				"name": "hora_evento",
+				"type": "time",
+				"scale": 7
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "dim_homicidios_fecha"
+		}
+	}
+}
