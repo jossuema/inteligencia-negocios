@@ -1,0 +1,164 @@
+{
+	"name": "detenciones_2019_2024",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "storageproject",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "mdi_detenidas_aprehendidos_pm_2019_2024_f.csv",
+				"container": "detenciones"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "CODIGO_ICCS",
+				"type": "String"
+			},
+			{
+				"name": "TIPO",
+				"type": "String"
+			},
+			{
+				"name": "ESTADO_CIVIL",
+				"type": "String"
+			},
+			{
+				"name": "ESTATUS_MIGRATORIO",
+				"type": "String"
+			},
+			{
+				"name": "EDAD_OK",
+				"type": "String"
+			},
+			{
+				"name": "SEXO",
+				"type": "String"
+			},
+			{
+				"name": "GENERO",
+				"type": "String"
+			},
+			{
+				"name": "NACIONALIDAD",
+				"type": "String"
+			},
+			{
+				"name": "AUTOIDENTIFICACION_ETNICA",
+				"type": "String"
+			},
+			{
+				"name": "NIVEL_DE_INSTRUCCION",
+				"type": "String"
+			},
+			{
+				"name": "CONDICION",
+				"type": "String"
+			},
+			{
+				"name": "MOVILIZACION",
+				"type": "String"
+			},
+			{
+				"name": "TIPO_ARMA",
+				"type": "String"
+			},
+			{
+				"name": "ARMA",
+				"type": "String"
+			},
+			{
+				"name": "FECHA_DETENCION_APREHENSION",
+				"type": "String"
+			},
+			{
+				"name": "HORA_DETENCION_APREHENSION",
+				"type": "String"
+			},
+			{
+				"name": "LUGAR",
+				"type": "String"
+			},
+			{
+				"name": "TIPO_LUGAR",
+				"type": "String"
+			},
+			{
+				"name": "CODIGO_DISTRITO",
+				"type": "String"
+			},
+			{
+				"name": "CODIGO_CIRCUITO",
+				"type": "String"
+			},
+			{
+				"name": "CODIGO_SUBCIRCUITO",
+				"type": "String"
+			},
+			{
+				"name": "NOMBRE_ZONA",
+				"type": "String"
+			},
+			{
+				"name": "NOMBRE_SUBZONA",
+				"type": "String"
+			},
+			{
+				"name": "NOMBRE_DISTRITO",
+				"type": "String"
+			},
+			{
+				"name": "NOMBRE_CIRCUITO",
+				"type": "String"
+			},
+			{
+				"name": "NOMBRE_SUBCIRCUITO",
+				"type": "String"
+			},
+			{
+				"name": "CODIGO_PROVINCIA",
+				"type": "String"
+			},
+			{
+				"name": "CODIGO_CANTON",
+				"type": "String"
+			},
+			{
+				"name": "CODIGO_PARROQUIA",
+				"type": "String"
+			},
+			{
+				"name": "NOMBRE_PROVINCIA",
+				"type": "String"
+			},
+			{
+				"name": "NOMBRE_CANTON",
+				"type": "String"
+			},
+			{
+				"name": "NOMBRE_PARROQUIA",
+				"type": "String"
+			},
+			{
+				"name": "PRESUNTA_INFRACCION",
+				"type": "String"
+			},
+			{
+				"name": "GRUPO_EDAD",
+				"type": "String"
+			},
+			{
+				"name": "ANIO",
+				"type": "String"
+			}
+		]
+	}
+}
