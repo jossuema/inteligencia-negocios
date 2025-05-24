@@ -14,19 +14,19 @@
 				"precision": 10
 			},
 			{
-				"name": "nombre_zona",
+				"name": "zona",
 				"type": "varchar"
 			},
 			{
-				"name": "nombre_distrito",
+				"name": "distrito",
 				"type": "varchar"
 			},
 			{
-				"name": "nombre_circuito",
+				"name": "circuito",
 				"type": "varchar"
 			},
 			{
-				"name": "nombre_subcircuito",
+				"name": "subcircuito",
 				"type": "varchar"
 			}
 		],
