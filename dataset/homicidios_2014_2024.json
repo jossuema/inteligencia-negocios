@@ -1,0 +1,158 @@
+{
+	"name": "homicidios_2014_2024",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "storageproject",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Excel",
+		"typeProperties": {
+			"sheetName": "Sheet1",
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "mdi_homicidiosintencionales_pm_2014_2024.xlsx",
+				"container": "homicidios"
+			},
+			"firstRowAsHeader": true
+		},
+		"schema": [
+			{
+				"name": "tipo_muerte",
+				"type": "String"
+			},
+			{
+				"name": "zona",
+				"type": "String"
+			},
+			{
+				"name": "subzona",
+				"type": "String"
+			},
+			{
+				"name": "distrito",
+				"type": "String"
+			},
+			{
+				"name": "circuito",
+				"type": "String"
+			},
+			{
+				"name": "codigo_subcircuito",
+				"type": "String"
+			},
+			{
+				"name": "subcircuito",
+				"type": "String"
+			},
+			{
+				"name": "provincia",
+				"type": "String"
+			},
+			{
+				"name": "codigo_provincia",
+				"type": "String"
+			},
+			{
+				"name": "canton",
+				"type": "String"
+			},
+			{
+				"name": "codigo_canton",
+				"type": "String"
+			},
+			{
+				"name": "coordenada_y",
+				"type": "String"
+			},
+			{
+				"name": "coordenada_x",
+				"type": "String"
+			},
+			{
+				"name": "area_hecho",
+				"type": "String"
+			},
+			{
+				"name": "lugar",
+				"type": "String"
+			},
+			{
+				"name": "tipo_lugar",
+				"type": "String"
+			},
+			{
+				"name": "fecha_infraccion",
+				"type": "String"
+			},
+			{
+				"name": "hora_infraccion",
+				"type": "String"
+			},
+			{
+				"name": "arma",
+				"type": "String"
+			},
+			{
+				"name": "tipo_arma",
+				"type": "String"
+			},
+			{
+				"name": "presunta_motivacion",
+				"type": "String"
+			},
+			{
+				"name": "presun_motiva_observada",
+				"type": "String"
+			},
+			{
+				"name": "probable_causa_motivada",
+				"type": "String"
+			},
+			{
+				"name": "edad",
+				"type": "String"
+			},
+			{
+				"name": "medida_edad",
+				"type": "String"
+			},
+			{
+				"name": "sexo",
+				"type": "String"
+			},
+			{
+				"name": "genero",
+				"type": "String"
+			},
+			{
+				"name": "etnia",
+				"type": "String"
+			},
+			{
+				"name": "estado_civil",
+				"type": "String"
+			},
+			{
+				"name": "nacionalidad",
+				"type": "String"
+			},
+			{
+				"name": "discapacidad",
+				"type": "String"
+			},
+			{
+				"name": "profesion_registro_civil",
+				"type": "String"
+			},
+			{
+				"name": "instruccion",
+				"type": "String"
+			},
+			{
+				"name": "antecedentes",
+				"type": "String"
+			}
+		]
+	}
+}
