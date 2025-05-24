@@ -189,7 +189,8 @@
 				"     skipDuplicateMapOutputs: true) ~> zona",
 				"setID select(mapColumn(",
 				"          delito_id = row_id,",
-				"          tipo_delito",
+				"          tipo_delito,",
+				"          delito",
 				"     ),",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true) ~> delito",
@@ -393,6 +394,7 @@
 				"     errorHandlingOption: 'stopOnFirstError',",
 				"     mapColumn(",
 				"          delito_id,",
+				"          delito,",
 				"          tipo_delito",
 				"     )) ~> delitoTable"
 			]
