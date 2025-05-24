@@ -1,5 +1,5 @@
 {
-	"name": "pipelineArmas",
+	"name": "pipelineGeneral",
 	"properties": {
 		"activities": [
 			{
@@ -23,13 +23,10 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataflow": {
-						"referenceName": "armasFlow",
+						"referenceName": "detencionesFlow",
 						"type": "DataFlowReference",
 						"parameters": {
-							"max_id": {
-								"value": "@activity('lookup_max_id').output.firstRow",
-								"type": "Expression"
-							}
+							"max_id": 0
 						}
 					},
 					"staging": {
@@ -37,7 +34,7 @@
 							"referenceName": "storageproject",
 							"type": "LinkedServiceReference"
 						},
-						"folderPath": "armasilicitas"
+						"folderPath": "detenciones"
 					},
 					"compute": {
 						"coreCount": 8,
@@ -61,14 +58,55 @@
 				"typeProperties": {
 					"source": {
 						"type": "SqlDWSource",
-						"sqlReaderQuery": "SELECT ISNULL(MAX(id_hecho), 0) AS max_id FROM hechos_incautacion_arma",
+						"sqlReaderQuery": "SELECT ISNULL(MAX(id_hecho), 0) AS max_id FROM hechos_detenciones",
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
 					"dataset": {
-						"referenceName": "hechos_incautacion_armas",
+						"referenceName": "hechos_detenciones",
 						"type": "DatasetReference"
 					}
+				}
+			},
+			{
+				"name": "Data flow2",
+				"type": "ExecuteDataFlow",
+				"dependsOn": [
+					{
+						"activity": "Data flow1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataflow": {
+						"referenceName": "detencionesFlow2",
+						"type": "DataFlowReference",
+						"parameters": {
+							"max_id": 489847
+						}
+					},
+					"staging": {
+						"linkedService": {
+							"referenceName": "storageproject",
+							"type": "LinkedServiceReference"
+						},
+						"folderPath": "detenciones"
+					},
+					"compute": {
+						"coreCount": 8,
+						"computeType": "General"
+					},
+					"traceLevel": "Fine"
 				}
 			}
 		],
