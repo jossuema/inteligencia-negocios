@@ -1,12 +1,12 @@
 {
-	"name": "armas",
+	"name": "armasFlow",
 	"properties": {
 		"type": "MappingDataFlow",
 		"typeProperties": {
 			"sources": [
 				{
 					"dataset": {
-						"referenceName": "armasilicitas",
+						"referenceName": "armasilicitas_2025",
 						"type": "DatasetReference"
 					},
 					"name": "datos"
@@ -109,8 +109,6 @@
 				"          codigo_iccs as string,",
 				"          subtipo_objeto_robado as string,",
 				"          nombre_objeto as string,",
-				"          cantidad as string,",
-				"          calibre as string,",
 				"          clase_arma as string,",
 				"          calidad_de as string,",
 				"          fabricacion as string,",
@@ -134,9 +132,7 @@
 				"          nombre_provincia as string,",
 				"          nombre_canton as string,",
 				"          nombre_parroquia as string,",
-				"          tipo_delito as string,",
-				"          delito as string,",
-				"          modalidad as string",
+				"          tipo_delito as string",
 				"     ),",
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
@@ -189,8 +185,7 @@
 				"     skipDuplicateMapOutputs: true) ~> zona",
 				"setID select(mapColumn(",
 				"          delito_id = row_id,",
-				"          tipo_delito,",
-				"          delito",
+				"          tipo_delito",
 				"     ),",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true) ~> delito",
@@ -394,7 +389,6 @@
 				"     errorHandlingOption: 'stopOnFirstError',",
 				"     mapColumn(",
 				"          delito_id,",
-				"          delito,",
 				"          tipo_delito",
 				"     )) ~> delitoTable"
 			]
