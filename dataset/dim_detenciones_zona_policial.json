@@ -1,0 +1,38 @@
+{
+	"name": "dim_detenciones_zona_policial",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "synapse",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlDWTable",
+		"schema": [
+			{
+				"name": "zona_policial_id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "nombre_zona",
+				"type": "varchar"
+			},
+			{
+				"name": "nombre_distrito",
+				"type": "varchar"
+			},
+			{
+				"name": "nombre_circuito",
+				"type": "varchar"
+			},
+			{
+				"name": "nombre_subcircuito",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "dim_detenciones_zona_policial"
+		}
+	}
+}
