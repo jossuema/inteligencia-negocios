@@ -1,0 +1,38 @@
+{
+	"name": "dim_incautacion_arma_zona_policial",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "synapse",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlDWTable",
+		"schema": [
+			{
+				"name": "zona_policial_id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "zona",
+				"type": "varchar"
+			},
+			{
+				"name": "distrito",
+				"type": "varchar"
+			},
+			{
+				"name": "circuito",
+				"type": "varchar"
+			},
+			{
+				"name": "subcircuito",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "dim_incautacion_arma_zona_policial"
+		}
+	}
+}
