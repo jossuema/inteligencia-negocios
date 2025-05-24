@@ -1,0 +1,30 @@
+{
+	"name": "dim_homicidios_motivacion",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "synapse",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlDWTable",
+		"schema": [
+			{
+				"name": "motivacion_id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "presunta_motivacion",
+				"type": "varchar"
+			},
+			{
+				"name": "causa_motivada",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "dim_homicidios_motivacion"
+		}
+	}
+}
