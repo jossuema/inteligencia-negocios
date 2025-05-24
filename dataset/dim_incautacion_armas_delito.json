@@ -1,5 +1,5 @@
 {
-	"name": "dim_incautacion_armas_ilicitas",
+	"name": "dim_incautacion_armas_delito",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "synapse",
