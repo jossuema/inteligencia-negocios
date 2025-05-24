@@ -1,0 +1,146 @@
+{
+	"name": "armasilicitas",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "storageproject",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Excel",
+		"typeProperties": {
+			"sheetName": "Sheet1",
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "mdi_armas_ilicitas_pm_2017_2024_final.xlsx",
+				"container": "armasilicitas"
+			},
+			"firstRowAsHeader": true
+		},
+		"schema": [
+			{
+				"name": "codigo_iccs",
+				"type": "String"
+			},
+			{
+				"name": "subtipo_objeto_robado",
+				"type": "String"
+			},
+			{
+				"name": "nombre_objeto",
+				"type": "String"
+			},
+			{
+				"name": "cantidad",
+				"type": "String"
+			},
+			{
+				"name": "calibre",
+				"type": "String"
+			},
+			{
+				"name": "clase_arma",
+				"type": "String"
+			},
+			{
+				"name": "calidad_de",
+				"type": "String"
+			},
+			{
+				"name": "fabricacion",
+				"type": "String"
+			},
+			{
+				"name": "fecha_evento",
+				"type": "String"
+			},
+			{
+				"name": "hora_evento",
+				"type": "String"
+			},
+			{
+				"name": "tipo_lugar",
+				"type": "String"
+			},
+			{
+				"name": "lugar",
+				"type": "String"
+			},
+			{
+				"name": "latitud",
+				"type": "String"
+			},
+			{
+				"name": "longitud",
+				"type": "String"
+			},
+			{
+				"name": "codigo_zona",
+				"type": "String"
+			},
+			{
+				"name": "codigo_distrito",
+				"type": "String"
+			},
+			{
+				"name": "codigo_circuito",
+				"type": "String"
+			},
+			{
+				"name": "codigo_subcircuito",
+				"type": "String"
+			},
+			{
+				"name": "nombre_zona",
+				"type": "String"
+			},
+			{
+				"name": "nombre_distrito",
+				"type": "String"
+			},
+			{
+				"name": "nombre_circuito",
+				"type": "String"
+			},
+			{
+				"name": "nombre_subcircuito",
+				"type": "String"
+			},
+			{
+				"name": "codigo_provincia",
+				"type": "String"
+			},
+			{
+				"name": "codigo_canton",
+				"type": "String"
+			},
+			{
+				"name": "codigo_parroquia",
+				"type": "String"
+			},
+			{
+				"name": "nombre_provincia",
+				"type": "String"
+			},
+			{
+				"name": "nombre_canton",
+				"type": "String"
+			},
+			{
+				"name": "nombre_parroquia",
+				"type": "String"
+			},
+			{
+				"name": "tipo_delito",
+				"type": "String"
+			},
+			{
+				"name": "delito",
+				"type": "String"
+			},
+			{
+				"name": "modalidad",
+				"type": "String"
+			}
+		]
+	}
+}
