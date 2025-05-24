@@ -1,0 +1,34 @@
+{
+	"name": "dim_homicidios_caracteristicas",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "synapse",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlDWTable",
+		"schema": [
+			{
+				"name": "caracteristicas_id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "tipo_muerte",
+				"type": "varchar"
+			},
+			{
+				"name": "arma",
+				"type": "varchar"
+			},
+			{
+				"name": "tipo_arma",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "dim_homicidios_caracteristicas"
+		}
+	}
+}
