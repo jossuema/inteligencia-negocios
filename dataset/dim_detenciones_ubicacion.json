@@ -1,0 +1,44 @@
+{
+	"name": "dim_detenciones_ubicacion",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "synapse",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlDWTable",
+		"schema": [
+			{
+				"name": "ubicacion_id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "provincia",
+				"type": "varchar"
+			},
+			{
+				"name": "canton",
+				"type": "varchar"
+			},
+			{
+				"name": "parroquia",
+				"type": "varchar"
+			},
+			{
+				"name": "latitud",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "longitud",
+				"type": "float",
+				"precision": 15
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "dim_detenciones_ubicacion"
+		}
+	}
+}
