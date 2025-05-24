@@ -1,0 +1,77 @@
+{
+	"name": "pipelineArmas",
+	"properties": {
+		"activities": [
+			{
+				"name": "Data flow1",
+				"type": "ExecuteDataFlow",
+				"dependsOn": [
+					{
+						"activity": "lookup_max_id",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataflow": {
+						"referenceName": "armasFlow",
+						"type": "DataFlowReference",
+						"parameters": {
+							"max_id": {
+								"value": "@activity('lookup_max_id').output.firstRow",
+								"type": "Expression"
+							}
+						}
+					},
+					"staging": {
+						"linkedService": {
+							"referenceName": "storageproject",
+							"type": "LinkedServiceReference"
+						},
+						"folderPath": "armasilicitas"
+					},
+					"compute": {
+						"coreCount": 8,
+						"computeType": "General"
+					},
+					"traceLevel": "Fine"
+				}
+			},
+			{
+				"name": "lookup_max_id",
+				"type": "Lookup",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "SqlDWSource",
+						"sqlReaderQuery": "SELECT ISNULL(MAX(id_hecho), 0) AS max_id FROM hechos_incautacion_arma",
+						"queryTimeout": "02:00:00",
+						"partitionOption": "None"
+					},
+					"dataset": {
+						"referenceName": "hechos_incautacion_armas",
+						"type": "DatasetReference"
+					}
+				}
+			}
+		],
+		"annotations": []
+	}
+}
