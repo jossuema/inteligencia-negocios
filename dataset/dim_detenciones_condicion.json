@@ -1,0 +1,46 @@
+{
+	"name": "dim_detenciones_condicion",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "synapse",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlDWTable",
+		"schema": [
+			{
+				"name": "condicion_id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "tipo_detencion",
+				"type": "varchar"
+			},
+			{
+				"name": "condicion",
+				"type": "varchar"
+			},
+			{
+				"name": "tipo_movilizacion",
+				"type": "varchar"
+			},
+			{
+				"name": "arma",
+				"type": "varchar"
+			},
+			{
+				"name": "tipo_arma",
+				"type": "varchar"
+			},
+			{
+				"name": "estatus_migratorio",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "dim_detenciones_condicion"
+		}
+	}
+}
