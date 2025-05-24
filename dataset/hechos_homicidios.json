@@ -1,0 +1,57 @@
+{
+	"name": "hechos_homicidios",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "synapse",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlDWTable",
+		"schema": [
+			{
+				"name": "id_hecho",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "fecha_id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ubicacion_id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "lugar_id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "zona_policial_id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "demografia_id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "motivacion_id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "caracteristicas_id",
+				"type": "int",
+				"precision": 10
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "hechos_homicidios"
+		}
+	}
+}
