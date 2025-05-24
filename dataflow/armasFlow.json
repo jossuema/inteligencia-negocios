@@ -6,7 +6,7 @@
 			"sources": [
 				{
 					"dataset": {
-						"referenceName": "armasilicitas_2025",
+						"referenceName": "armasilicitas_2017_2024",
 						"type": "DatasetReference"
 					},
 					"name": "datos"
@@ -103,12 +103,14 @@
 			],
 			"scriptLines": [
 				"parameters{",
-				"     max_id as integer (10)",
+				"     max_id as integer (3453)",
 				"}",
 				"source(output(",
 				"          codigo_iccs as string,",
 				"          subtipo_objeto_robado as string,",
 				"          nombre_objeto as string,",
+				"          cantidad as string,",
+				"          calibre as string,",
 				"          clase_arma as string,",
 				"          calidad_de as string,",
 				"          fabricacion as string,",
@@ -132,7 +134,9 @@
 				"          nombre_provincia as string,",
 				"          nombre_canton as string,",
 				"          nombre_parroquia as string,",
-				"          tipo_delito as string",
+				"          tipo_delito as string,",
+				"          delito as string,",
+				"          modalidad as string",
 				"     ),",
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
