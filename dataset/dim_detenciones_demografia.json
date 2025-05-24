@@ -1,0 +1,51 @@
+{
+	"name": "dim_detenciones_demografia",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "synapse",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlDWTable",
+		"schema": [
+			{
+				"name": "demografia_id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "sexo",
+				"type": "varchar"
+			},
+			{
+				"name": "genero",
+				"type": "varchar"
+			},
+			{
+				"name": "edad",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "nacionalidad",
+				"type": "varchar"
+			},
+			{
+				"name": "etnia",
+				"type": "varchar"
+			},
+			{
+				"name": "estado_civil",
+				"type": "varchar"
+			},
+			{
+				"name": "nivel_instruccion",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "dim_detenciones_demografia"
+		}
+	}
+}
