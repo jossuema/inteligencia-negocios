@@ -25,7 +25,7 @@
 						"referenceName": "dim_detenciones_ubicacion",
 						"type": "DatasetReference"
 					},
-					"name": "sink2"
+					"name": "ubicacionTable"
 				},
 				{
 					"dataset": {
@@ -86,7 +86,7 @@
 					"name": "hechos"
 				},
 				{
-					"name": "derivedColumn1"
+					"name": "setRelaciones"
 				},
 				{
 					"name": "setLatitudLongitud"
@@ -194,7 +194,7 @@
 				"     ),",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true) ~> delito",
-				"derivedColumn1 select(mapColumn(",
+				"setRelaciones select(mapColumn(",
 				"          id_hecho,",
 				"          fecha_id,",
 				"          arma_id,",
@@ -211,7 +211,7 @@
 				"          zona_id = row_id,",
 				"          ubicacion_id = row_id,",
 				"          lugar_id = row_id,",
-				"          delito_id = row_id) ~> derivedColumn1",
+				"          delito_id = row_id) ~> setRelaciones",
 				"setID derive(longitud = toFloat(replace(trim(replace(longitud, \"'\", \"\")), \",\", \".\")),",
 				"          latitud = toFloat(replace(trim(replace(latitud, \"'\", \"\")), \",\", \".\"))) ~> setLatitudLongitud",
 				"setID derive(hora_evento = toString(toTimestamp(fecha_evento + ' ' + hora_evento, 'yyyy-MM-dd HH:mm:ss'))) ~> setHora",
@@ -276,7 +276,7 @@
 				"          parroquia = nombre_parroquia,",
 				"          latitud,",
 				"          longitud",
-				"     )) ~> sink2",
+				"     )) ~> ubicacionTable",
 				"zona sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     input(",
